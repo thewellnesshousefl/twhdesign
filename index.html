@@ -1,24 +1,19 @@
-Done. The hero now reads exactly as you described — label, headline, one clean descriptor line, and the two buttons. Paste the updated file into GitHub when ready, or let me know if you'd like any other changes first.
-
-Here's the full file to paste into GitHub. Go to your repo → `index.html` → pencil icon → select all → delete → paste:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wellness House — Dr. Zoyara Reyes | Orlando, FL</title>
-  <meta name="description" content="An elevated wellness experience in Orlando, FL. Chiropractic, massage & bodywork, and whole-life wellness consultations with Dr. Zoyara Reyes.">
+  <title>Services — The Wellness House | Dr. Zoyara Reyes</title>
+  <meta name="description" content="Massage & bodywork, chiropractic care, and wellness consultations. Boutique sessions in-office or at home in Orlando, FL.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --background: #FCFBF7; --foreground: #1A2114; --muted: #F0EDE8; --muted-fg: #7A756E;
-      --border: #DDD9D3; --primary: #6F8060; --primary-fg: #FCFBF7; --forest: #232C1E; --forest-fg: #FCFBF7;
-      --radius: 6px;
-      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px; --s16:64px; --s24:96px;
+      --background:#FCFBF7;--foreground:#1A2114;--muted:#F0EDE8;--muted-fg:#7A756E;
+      --border:#DDD9D3;--primary:#6F8060;--primary-fg:#FCFBF7;
+      --forest:#232C1E;--forest-fg:#FCFBF7;--radius:6px;
+      --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--s16:64px;--s24:96px;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -30,72 +25,31 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     @media(max-width:768px){.container{padding:0 var(--s4)}}
     section{padding:var(--s24) 0}
     @media(max-width:768px){section{padding:var(--s16) 0}}
-
     nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(252,251,247,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);height:64px}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1280px;margin:0 auto;padding:0 var(--s6)}
     .nav-logo{font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
     .nav-links{display:flex;gap:var(--s8);list-style:none}
     .nav-links a{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-fg);transition:color 150ms}
-    .nav-links a:hover{color:var(--foreground)}
+    .nav-links a:hover,.nav-links a.active{color:var(--foreground)}
     .nav-right{display:flex;align-items:center;gap:var(--s3);font-size:13px;color:var(--muted-fg)}
     .nav-right a{color:var(--primary);font-weight:500}
     @media(max-width:860px){.nav-links{display:none}.nav-right span{display:none}}
-
     .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:14px var(--s8);border-radius:var(--radius);border:none;cursor:pointer;min-height:44px;transition:background 200ms,border-color 200ms,color 200ms}
     .btn-primary{background:var(--primary);color:var(--primary-fg)}
     .btn-primary:hover{background:#5a6a4d}
-    .btn-outline{background:transparent;color:var(--foreground);border:1px solid var(--border)}
-    .btn-outline:hover{border-color:var(--primary);color:var(--primary)}
-    .btn-white{background:var(--background);color:var(--primary)}
-
     .label{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:var(--s4)}
-    .label-light{color:rgba(174,183,156,.9)}
-
-    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px;overflow:hidden}
-    @media(max-width:860px){.hero{grid-template-columns:1fr}}
-    .hero-left{display:flex;align-items:center;padding:var(--s24) var(--s6) var(--s24) calc((100vw - 1280px)/2 + var(--s6))}
-    @media(max-width:1280px){.hero-left{padding-left:var(--s6)}}
-    @media(max-width:768px){.hero-left{padding:var(--s16) var(--s4)}}
-    .hero-content{max-width:520px}
-    .hero-content h1{font-size:clamp(40px,5vw,66px);font-weight:300;line-height:1.05;margin-bottom:var(--s4)}
-    .hero-content h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--primary)}
-    .hero-sub{font-size:17px;color:var(--muted-fg);line-height:1.7;margin-bottom:var(--s8)}
-    .hero-cta{display:flex;gap:var(--s4);flex-wrap:wrap}
-    .hero-right{position:relative;overflow:hidden}
-    @media(max-width:860px){.hero-right{min-height:60vw}}
-    .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-
-    .welcome-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:var(--s16);align-items:start}
-    @media(max-width:860px){.welcome-grid{grid-template-columns:1fr}}
-    .welcome-photo-wrap{position:relative}
-    .welcome-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:calc(var(--radius)*2)}
-    .welcome-photo-caption{position:absolute;bottom:var(--s4);left:var(--s4);background:var(--background);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);padding:var(--s2) var(--s4);border-radius:var(--radius)}
-    .welcome-body{display:flex;flex-direction:column;gap:var(--s6)}
-    blockquote.pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:1.45;border-left:2px solid var(--primary);padding-left:var(--s6)}
     .body-text{font-size:16px;line-height:1.75;color:var(--muted-fg)}
-    .body-text p+p{margin-top:var(--s4)}
-    .signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--primary)}
     .rule{height:1px;background:var(--border);max-width:1280px;margin:0 auto}
-
-    .signature-services{background:var(--background)}
-    .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8)}
-    @media(max-width:800px){.sig-grid{grid-template-columns:1fr}}
-    .sig-card{border:1px solid var(--border);border-radius:calc(var(--radius)*2);padding:var(--s8);background:var(--muted);display:flex;flex-direction:column}
-    .sig-card--dark{background:var(--forest);border-color:transparent}
-    .sig-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--primary);margin-bottom:var(--s3)}
-    .sig-title{font-family:'Jost',sans-serif;font-size:clamp(24px,3vw,32px);font-weight:400;margin-bottom:var(--s2)}
-    .sig-duration{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-fg);margin-bottom:var(--s6)}
-    .sig-desc{font-size:15px;line-height:1.75;color:var(--muted-fg);flex:1;margin-bottom:var(--s6)}
-    .sig-price{font-family:'Jost',sans-serif;font-size:22px;font-weight:500}
-    .sig-price span{font-size:13px;font-weight:400;color:var(--muted-fg)}
-
-    .services-massage{background:var(--muted)}
-    .section-head{text-align:center;margin-bottom:var(--s12)}
-    .section-head .label{text-align:center}
+    .page-hero{padding-top:calc(64px + var(--s16));padding-bottom:var(--s12);background:var(--muted)}
+    .page-hero-inner{max-width:640px}
+    .page-hero h1{font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;margin-bottom:var(--s4)}
+    .page-hero h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--primary)}
+    .page-hero p{font-size:17px;color:var(--muted-fg);line-height:1.7}
     .section-title{font-family:'Jost',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;margin-bottom:var(--s4)}
-    .section-intro{font-size:17px;color:var(--muted-fg);max-width:600px;margin:0 auto;line-height:1.7}
+    .section-intro{font-size:17px;color:var(--muted-fg);max-width:600px;line-height:1.7;margin-bottom:var(--s12)}
+    .services-massage{background:var(--muted)}
     .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--s6)}
-    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:480px}}
     .card{background:var(--background);border:1px solid var(--border);border-radius:calc(var(--radius)*2);overflow:hidden;display:flex;flex-direction:column}
     .card-img-placeholder{width:100%;aspect-ratio:4/3;background:var(--muted);display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted-fg)}
     .card-body{padding:var(--s6);flex:1;display:flex;flex-direction:column}
@@ -106,7 +60,6 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     .card-price small{display:block;font-size:13px;font-weight:400;color:var(--muted-fg);margin-top:2px}
     .services-note{text-align:center;margin-top:var(--s12);font-size:14px;color:var(--muted-fg)}
     .services-note a{color:var(--primary);text-decoration:underline}
-
     .chiro-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8)}
     @media(max-width:800px){.chiro-grid{grid-template-columns:1fr}}
     .chiro-card{border:1px solid var(--border);border-radius:calc(var(--radius)*2);padding:var(--s8);background:var(--muted)}
@@ -117,42 +70,6 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     .chiro-desc{font-size:15px;line-height:1.75;color:var(--muted-fg);margin-bottom:var(--s6)}
     .chiro-price{font-family:'Jost',sans-serif;font-size:26px;font-weight:500}
     .chiro-price-note{font-size:13px;color:var(--primary);margin-top:2px}
-
-    .fit{background:var(--forest);color:var(--forest-fg)}
-    .fit .section-title{color:var(--forest-fg)}
-    .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16);align-items:start}
-    @media(max-width:860px){.fit-grid{grid-template-columns:1fr}}
-    .fit-list{display:flex;flex-direction:column;gap:var(--s6);margin-top:var(--s8)}
-    .fit-item{display:flex;gap:var(--s4);font-size:16px;line-height:1.65;color:rgba(252,251,247,.75)}
-    .fit-item::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:10px}
-    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);margin-top:var(--s12)}
-    .pillar{text-align:center;padding:var(--s8) var(--s4);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius)}
-    .pillar-icon{font-size:24px;margin-bottom:var(--s4);color:var(--primary)}
-    .pillar-title{font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--forest-fg);margin-bottom:var(--s2)}
-    .pillar-desc{font-size:13px;color:rgba(252,251,247,.55);line-height:1.55}
-    .fit-cta{text-align:center;margin-top:var(--s12)}
-
-    .quote-section{text-align:center}
-    .big-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,4vw,48px);line-height:1.3;max-width:720px;margin:0 auto var(--s6)}
-    .quote-attr{font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--primary)}
-
-    .corporate{background:var(--primary);color:var(--primary-fg);text-align:center;padding:var(--s16) 0}
-    .corporate .section-title{color:var(--primary-fg);margin-bottom:var(--s4)}
-    .corporate .label{color:rgba(252,251,247,.65);text-align:center}
-    .corporate-desc{font-size:17px;color:rgba(252,251,247,.85);max-width:520px;margin:0 auto var(--s8);line-height:1.7}
-
-    .contact{background:var(--forest);color:var(--forest-fg)}
-    .contact .section-title{color:var(--forest-fg)}
-    .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s16);align-items:start}
-    @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
-    .contact-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
-    .contact-info{display:flex;flex-direction:column;gap:var(--s8)}
-    .contact-block .label{color:rgba(174,183,156,.85);margin-bottom:var(--s2)}
-    .contact-val{font-size:16px;color:rgba(252,251,247,.88);line-height:1.7}
-    .contact-val a{transition:color 150ms}
-    .contact-val a:hover{color:#fff}
-    .contact-note{font-size:13px;color:rgba(252,251,247,.45);margin-top:4px}
-
     footer{background:var(--forest);border-top:1px solid rgba(255,255,255,.07);padding:var(--s8) 0}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s4)}
     .footer-logo{font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(252,251,247,.5)}
@@ -166,11 +83,11 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
 
   <nav role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">The Wellness House</a>
+      <a href="index.html" class="nav-logo">The Wellness House</a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
         <span>Text us</span>
@@ -179,81 +96,21 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     </div>
   </nav>
 
-  <section class="hero" aria-label="Welcome">
-    <div class="hero-left">
-      <div class="hero-content">
-        <span class="label">An Elevated Wellness Experience</span>
-        <h1>Life feels better<br><em>when you do.</em></h1>
-        <p class="hero-sub">Chiropractic &amp; fascia release, massage &amp; bodywork, and wellness consultations — a boutique experience, at home or in-office.</p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Request a Session</a>
-          <a href="#services" class="btn btn-outline">Explore Services</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="assets/hero.jpg" alt="Two people standing at the ocean's edge — a moment of stillness and possibility" class="hero-photo">
-    </div>
-  </section>
-
-  <section id="about" aria-labelledby="welcome-heading">
+  <div class="page-hero">
     <div class="container">
-      <div class="welcome-grid">
-        <div class="welcome-photo-wrap">
-          <img src="assets/about.jpg" alt="Dr. Zoyara Reyes, founder of The Wellness House" class="welcome-photo">
-          <span class="welcome-photo-caption">Dr. Zoyara Reyes</span>
-        </div>
-        <div class="welcome-body">
-          <span class="label" id="welcome-heading">Welcome to The Wellness House</span>
-          <blockquote class="pull">"In the journey of life, I'm reaching for the stars — leaning into the radical power of transformation. The moment the 'impossible' becomes the baseline."</blockquote>
-          <div class="body-text">
-            <p>This space is for those who choose the extraordinary. For those who choose a life where health is no longer a quiet distraction, but the foundation for everything you create.</p>
-            <p>I'm talking about a body that feels incredible — one that makes your mind work better, your relationships flourish, and your business grow.</p>
-            <p>Our services are a sanctuary for the whole person. We provide the space to reset, reclaim, and reconnect with your inner vitality. Unlike traditional clinics, we don't just address symptoms — we create the conditions for your body to truly thrive.</p>
-            <p>This is more than a treatment. It's an experience where something shifts deep within you — even if you don't yet have the words for it.</p>
-          </div>
-          <p class="signature">— Dr. Zoyara Reyes</p>
-        </div>
+      <div class="page-hero-inner">
+        <span class="label">Our Services</span>
+        <h1>Elevated care,<br><em>tailored to you.</em></h1>
+        <p>Boutique wellness sessions available in-office or at home in Orlando, FL. All appointments by request.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="signature-services" aria-labelledby="sig-heading">
+  <section class="services-massage" id="massage" aria-labelledby="massage-heading">
     <div class="container">
-      <div class="section-head">
-        <span class="label">Signature Experiences</span>
-        <h2 class="section-title" id="sig-heading">Where to Begin</h2>
-      </div>
-      <div class="sig-grid">
-        <article class="sig-card">
-          <div class="sig-label">Massage &amp; Bodywork</div>
-          <h3 class="sig-title">The Immersion</h3>
-          <p class="sig-duration">2 hrs · Full Body Experience</p>
-          <p class="sig-desc">Our most transformative bodywork session. Layer by layer, the body unwinds — allowing for deeper therapeutic work, sustained relaxation, and access to tension patterns shorter sessions can't fully reach.</p>
-          <div class="sig-price">$250 <span>· Dr. Reyes &amp; Brandon $300</span></div>
-          <a href="#services" class="btn btn-outline" style="margin-top:var(--s6);">See All Massage Services</a>
-        </article>
-        <article class="sig-card sig-card--dark">
-          <div class="sig-label" style="color:rgba(174,183,156,0.85);">Chiropractic</div>
-          <h3 class="sig-title" style="color:#FCFBF7;">Chiropractic Exam</h3>
-          <p class="sig-duration" style="color:rgba(252,251,247,0.55);">~75 min · Initial Exam · Adjustment · Massage</p>
-          <p class="sig-desc" style="color:rgba(252,251,247,0.75);">A profound exploration of your well-being. Personalized chiropractic care combined with lifestyle conversations and 20 min. massage and bodywork — all in one elevated visit.</p>
-          <div class="sig-price" style="color:#FCFBF7;">$175 <span style="color:rgba(252,251,247,0.5);">· Initial Visit</span></div>
-          <a href="#chiro" class="btn btn-primary" style="margin-top:var(--s6);">See Chiropractic Services</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"></div>
-
-  <section class="services-massage" id="services" aria-labelledby="massage-heading">
-    <div class="container">
-      <div class="section-head">
-        <span class="label">Massage &amp; Bodywork</span>
-        <h2 class="section-title" id="massage-heading">The Reboot</h2>
-        <p class="section-intro">Light-touch bodywork that creates space for deep tissue release — giving your nervous system room to reset, restore, and reconnect.</p>
-      </div>
+      <span class="label">Massage &amp; Bodywork</span>
+      <h2 class="section-title" id="massage-heading">The Reboot</h2>
+      <p class="section-intro">Light-touch bodywork that creates space for deep tissue release — giving your nervous system room to reset, restore, and reconnect.</p>
       <div class="cards">
         <article class="card">
           <div class="card-img-placeholder">Photo coming soon</div>
@@ -288,7 +145,7 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
           </div>
         </article>
       </div>
-      <p class="services-note">All sessions are by appointment only. <a href="mailto:hello@thewellnesshousefl.com">Email us</a> or text <a href="tel:4079617616">407·961·7616</a> to book.</p>
+      <p class="services-note">All sessions by appointment. <a href="mailto:hello@thewellnesshousefl.com">Email us</a> or text <a href="tel:4079617616">407·961·7616</a> to book.</p>
     </div>
   </section>
 
@@ -298,7 +155,7 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     <div class="container">
       <span class="label">Clinical Services</span>
       <h2 class="section-title" id="chiro-heading">Chiropractic &amp; Consultations</h2>
-      <p class="body-text" style="max-width:600px;margin-bottom:var(--s12);">Precision care that goes beyond the adjustment — integrating chiropractic, myofascial release, and whole-life wellness strategy.</p>
+      <p class="section-intro">Precision care that goes beyond the adjustment — integrating chiropractic, myofascial release, and whole-life wellness strategy.</p>
       <div class="chiro-grid">
         <article class="chiro-card">
           <div class="chiro-head">
@@ -313,7 +170,7 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
           <p class="chiro-desc">Our 1:1 Elevated-Care experience combines chiropractic care, lifestyle conversations, and specialized 20 min. massage and bodywork.</p>
           <p class="chiro-desc" style="font-size:13px;"><strong style="font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;">Available In-Office Therapies</strong><br>Shockwave Therapy · Intersegmental Traction · Cupping Therapy · Therapeutic Exercises</p>
           <p class="chiro-desc" style="font-size:13px;color:var(--primary);">We are currently accepting patients involved in a car accident. Get your evaluation within 14 days after the accident.</p>
-          <div class="chiro-price">$175</div>
+          <div class="chiro-price">Starts at $175</div>
         </article>
         <article class="chiro-card">
           <div class="chiro-head">
@@ -333,94 +190,6 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
     </div>
   </section>
 
-  <section class="fit" aria-labelledby="fit-heading">
-    <div class="container">
-      <div class="fit-grid">
-        <div>
-          <span class="label label-light">Is This for You?</span>
-          <h2 class="section-title" id="fit-heading">Are we the team<br>for <em style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;">you?</em></h2>
-          <div class="fit-list">
-            <p class="fit-item">You care about your body — and you know it's more than just physical. Your lifestyle, emotions, and health are all connected.</p>
-            <p class="fit-item">You want relief, and you want to feel genuinely good in your body — not just "fine."</p>
-            <p class="fit-item">You're not looking for a quick fix. You're ready to be consistent, curious, and patient with the process.</p>
-            <p class="fit-item">You feel tired of pushing through. You know how you show up physically affects everything — and you're ready for that to change.</p>
-          </div>
-        </div>
-        <div>
-          <div class="pillars">
-            <div class="pillar">
-              <div class="pillar-icon">✦</div>
-              <p class="pillar-title">Vitality</p>
-              <p class="pillar-desc">Unlock the energy your body was built to sustain.</p>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <p class="pillar-title">Freedom</p>
-              <p class="pillar-desc">Bring ease back to your movement, mind, and daily life.</p>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">◎</div>
-              <p class="pillar-title">Evolution</p>
-              <p class="pillar-desc">Build the foundation for everything you're becoming.</p>
-            </div>
-          </div>
-          <div class="fit-cta">
-            <a href="#contact" class="btn btn-primary">Start Your Journey</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-section" aria-label="Brand quote">
-    <div class="container">
-      <blockquote class="big-quote">"Life feels better when you do."</blockquote>
-      <p class="quote-attr">— The Wellness House</p>
-    </div>
-  </section>
-
-  <section class="corporate" aria-labelledby="corp-heading">
-    <div class="container">
-      <span class="label">For Teams &amp; Organizations</span>
-      <h2 class="section-title" id="corp-heading">Corporate Wellness Program</h2>
-      <p class="corporate-desc">Bring the transformative care of The Wellness House to your team. Customized wellness programs designed to help your people feel — and perform — at their best.</p>
-      <a href="mailto:hello@thewellnesshousefl.com?subject=Corporate%20Wellness%20Inquiry" class="btn btn-white">Learn More</a>
-    </div>
-  </section>
-
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="container">
-      <div class="contact-grid">
-        <img src="assets/contact.jpg" alt="Booking your session is just a text away" class="contact-photo">
-        <div class="contact-info">
-          <div>
-            <span class="label label-light">Book a Session</span>
-            <h2 class="section-title" id="contact-heading">By Appointment Only</h2>
-            <p class="body-text" style="color:rgba(252,251,247,0.7);margin-top:var(--s4);">Our sessions are designed for real transformation — not rushed appointments. Reach out and we'll find a time that works for you.</p>
-          </div>
-          <div class="contact-block">
-            <span class="label">Text or Call</span>
-            <p class="contact-val"><a href="tel:4079617616">407·961·7616</a></p>
-          </div>
-          <div class="contact-block">
-            <span class="label">Email</span>
-            <p class="contact-val"><a href="mailto:hello@thewellnesshousefl.com">hello@thewellnesshousefl.com</a></p>
-          </div>
-          <div class="contact-block">
-            <span class="label">Location</span>
-            <p class="contact-val">401 N. Mills Ave, STE A<br>Orlando, FL 32803</p>
-            <p class="contact-note">In-office sessions · Home visits available</p>
-          </div>
-          <div class="contact-block">
-            <span class="label">Hours</span>
-            <p class="contact-val">Monday – Friday: 9AM – 5PM<br>Saturday: Available by request</p>
-          </div>
-          <a href="tel:4079617616" class="btn btn-primary" style="align-self:flex-start;margin-top:var(--s4);">Text to Book &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -433,4 +202,3 @@ Here's the full file to paste into GitHub. Go to your repo → `index.html` → 
 
 </body>
 </html>
-```
