@@ -3,108 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — The Wellness House | Dr. Zoyara Reyes</title>
-  <meta name="description" content="Massage & bodywork, chiropractic care, and wellness consultations. Boutique sessions in-office or at home in Orlando, FL.">
+  <title>Services — The Wellness House</title>
+  <meta name="description" content="Massage & bodywork, chiropractic care, and wellness consultations in Orlando, FL.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Hanken+Grotesk:wght@300;400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper:#F4F1EA;--linen:#EBE6DB;--surface:#FCFBF7;--stone:#D7D0C2;
-      --ink:#23241E;--ink-soft:#4F5046;--ink-muted:#857F71;
-      --sage:#6F8060;--forest:#232C1E;--radius:14px;
-      --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s10:40px;--s12:48px;--s16:64px;--s20:80px;--s24:96px;
+      --paper: #F4F1EA;
+      --linen: #EBE6DB;
+      --surface: #FCFBF7;
+      --stone: #D7D0C2;
+      --ink: #23241E;
+      --ink-soft: #4F5046;
+      --ink-muted: #857F71;
+      --sage: #6F8060;
+      --forest: #232C1E;
+      --r: 14px;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Hanken Grotesk',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Hanken Grotesk', sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
 
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;background:rgba(244,241,234,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07)}
-    .nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s8)}
-    .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
-    .nav-logo svg{width:28px;height:28px;flex-shrink:0}
-    .nav-links{display:flex;gap:var(--s8);list-style:none}
-    .nav-links a{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);transition:color 150ms}
-    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
-    .nav-cta{display:flex;align-items:center;gap:var(--s4)}
-    .nav-book{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border:1px solid var(--ink);border-radius:100px;color:var(--ink);transition:background 200ms,color 200ms}
-    .nav-book:hover{background:var(--ink);color:var(--surface)}
-    @media(max-width:860px){.nav-links{display:none}}
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px; background: rgba(244,241,234,.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--stone); display: flex; align-items: center; }
+    .nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); transition: color 150ms; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-book { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 8px 18px; border: 1px solid var(--ink); border-radius: 100px; color: var(--ink); transition: background 200ms, color 200ms; }
+    .nav-book:hover { background: var(--ink); color: var(--surface); }
+    @media (max-width: 860px) { .nav-links { display: none; } }
 
-    .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px var(--s8);border-radius:100px;border:none;cursor:pointer;transition:background 200ms,color 200ms}
-    .btn-dark{background:var(--forest);color:var(--surface)}
-    .btn-dark:hover{background:#3a4c30}
+    .page-hero { padding: calc(60px + 64px) 32px 48px; background: var(--linen); }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .eyebrow::before { content: '—'; opacity: .5; }
+    .page-hero h1 { font-family: 'Hanken Grotesk', sans-serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 16px; }
+    .page-hero h1 em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; color: var(--sage); }
+    .page-hero p { font-size: 16px; color: var(--ink-muted); max-width: 480px; }
 
-    .eyebrow{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
-    .eyebrow::before{content:'—';opacity:.5}
-    .eyebrow-sage{color:var(--sage)}
+    .section { padding: 80px 32px; }
+    .section-alt { background: var(--linen); }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-head { margin-bottom: 40px; }
+    .section-head h2 { font-family: 'Hanken Grotesk', sans-serif; font-size: clamp(26px, 3.5vw, 38px); font-weight: 300; line-height: 1.1; letter-spacing: -.01em; margin-bottom: 10px; }
+    .section-head p { font-size: 16px; color: var(--ink-muted); max-width: 520px; }
 
-    .page-hero{padding-top:calc(60px + var(--s16));padding-bottom:var(--s12);background:var(--linen)}
-    .page-hero-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8)}
-    .page-hero h1{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.05;letter-spacing:-.02em;margin-bottom:var(--s4)}
-    .page-hero h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--sage)}
-    .page-hero p{font-size:16px;color:var(--ink-muted);line-height:1.7;max-width:500px}
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .cards { grid-template-columns: 1fr; max-width: 460px; } }
+    .card { background: var(--surface); border: 1px solid rgba(0,0,0,.07); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .card-tag { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--sage); }
+    .card-title { font-family: 'Hanken Grotesk', sans-serif; font-size: 22px; font-weight: 400; color: var(--ink); }
+    .card-desc { font-size: 14px; line-height: 1.75; color: var(--ink-muted); flex: 1; }
+    .card-price { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 500; color: var(--ink); border-top: 1px solid var(--linen); padding-top: 16px; margin-top: auto; }
+    .card-price small { display: block; font-size: 12px; font-weight: 400; color: var(--ink-muted); margin-top: 3px; }
 
-    .section-wrap{max-width:1200px;margin:0 auto;padding:var(--s20) var(--s8)}
-    .section-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
-    .section-label::before{content:'—';opacity:.5}
-    .section-title{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:300;line-height:1.1;letter-spacing:-.01em;margin-bottom:var(--s3)}
-    .section-intro{font-size:16px;color:var(--ink-muted);line-height:1.7;max-width:560px;margin-bottom:var(--s10)}
+    .clinical-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 800px) { .clinical-grid { grid-template-columns: 1fr; } }
+    .ccard { background: var(--surface); border: 1px solid rgba(0,0,0,.07); border-radius: var(--r); padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .ccard-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .ccard-title { font-family: 'Hanken Grotesk', sans-serif; font-size: 26px; font-weight: 300; color: var(--ink); }
+    .ccard-sub { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin-top: 4px; }
+    .ccard-badge { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); background: rgba(111,128,96,.1); padding: 4px 12px; border-radius: 100px; white-space: nowrap; }
+    .ccard-body { display: flex; flex-direction: column; gap: 12px; }
+    .ccard-body p { font-size: 15px; line-height: 1.75; color: var(--ink-muted); }
+    .ccard-list { font-size: 13px; color: var(--ink-muted); }
+    .ccard-list strong { display: block; font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+    .ccard-list ul { list-style: disc; padding-left: 18px; line-height: 2; }
+    .ccard-alert { font-size: 13px; color: var(--sage); line-height: 1.6; }
+    .ccard-price { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 400; color: var(--ink); border-top: 1px solid var(--linen); padding-top: 16px; margin-top: auto; }
+    .ccard-price-note { font-size: 13px; color: var(--sage); margin-top: 4px; }
 
-    .massage-bg{background:var(--linen)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
-    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:480px}}
-    .card{background:var(--surface);border:1px solid rgba(0,0,0,.07);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-    .card-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-    .card-body{padding:var(--s6);flex:1;display:flex;flex-direction:column;gap:var(--s3)}
-    .card-duration{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sage)}
-    .card-title{font-family:'Hanken Grotesk',sans-serif;font-size:22px;font-weight:400;color:var(--ink);line-height:1.2}
-    .card-desc{font-size:14px;line-height:1.7;color:var(--ink-muted);flex:1}
-    .card-price{border-top:1px solid var(--linen);padding-top:var(--s4);margin-top:auto;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--ink)}
-    .card-price small{display:block;font-size:12px;font-weight:400;color:var(--ink-muted);margin-top:2px}
+    footer { background: var(--forest); border-top: 1px solid rgba(255,255,255,.07); padding: 64px 32px 32px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+    .footer-logo { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: rgba(255,255,255,.35); margin-top: 8px; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { font-size: 14px; color: rgba(255,255,255,.55); transition: color 150ms; }
+    .footer-col ul a:hover { color: rgba(255,255,255,.9); }
+    .footer-col p { font-size: 14px; color: rgba(255,255,255,.55); line-height: 1.7; }
+    .footer-bottom { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom span { font-size: 12px; color: rgba(255,255,255,.25); }
 
-    .chiro-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6)}
-    @media(max-width:800px){.chiro-grid{grid-template-columns:1fr}}
-    .chiro-card{background:var(--surface);border:1px solid rgba(0,0,0,.07);border-radius:var(--radius);padding:var(--s8);display:flex;flex-direction:column;gap:var(--s4)}
-    .chiro-head{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s4)}
-    .chiro-title{font-family:'Hanken Grotesk',sans-serif;font-size:26px;font-weight:300;color:var(--ink)}
-    .chiro-badge{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);background:rgba(111,128,96,.1);padding:4px 12px;border-radius:100px;white-space:nowrap;margin-top:4px}
-    .chiro-sub{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted)}
-    .chiro-desc{font-size:15px;line-height:1.75;color:var(--ink-muted)}
-    .chiro-therapies{font-size:13px;color:var(--ink-muted);line-height:1.7}
-    .chiro-therapies strong{display:block;font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:4px}
-    .chiro-alert{font-size:13px;color:var(--sage);line-height:1.6}
-    .chiro-price{font-family:'Jost',sans-serif;font-size:26px;font-weight:400;color:var(--ink);border-top:1px solid var(--linen);padding-top:var(--s4);margin-top:auto}
-    .chiro-price-note{font-size:13px;color:var(--sage);margin-top:2px}
-
-    .note{text-align:center;margin-top:var(--s10);font-size:14px;color:var(--ink-muted)}
-    .note a{color:var(--sage);text-decoration:underline}
-    .rule{height:1px;background:var(--stone);max-width:1200px;margin:0 auto}
-
-    footer{background:var(--forest);border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--s12)}
-    @media(max-width:700px){.footer-inner{grid-template-columns:1fr 1fr}}
-    .footer-brand{display:flex;flex-direction:column;gap:var(--s3)}
-    .footer-logo{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-    .footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(255,255,255,.35)}
-    .footer-col h4{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:var(--s4)}
-    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:var(--s2)}
-    .footer-col ul a{font-size:14px;color:rgba(255,255,255,.55);transition:color 150ms}
-    .footer-col ul a:hover{color:rgba(255,255,255,.9)}
-    .footer-col p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.7}
-    .footer-bottom{max-width:1200px;margin:var(--s12) auto 0;padding:var(--s6) var(--s8) 0;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s4)}
-    .footer-copy,.footer-sub{font-size:12px;color:rgba(255,255,255,.25)}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important}}
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
 
-  <nav role="navigation" aria-label="Main navigation">
+  <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1"/>
           <text x="14" y="18" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" font-weight="600" fill="currentColor" letter-spacing="1">TWH</text>
         </svg>
@@ -115,112 +112,131 @@
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
-      <div class="nav-cta">
-        <a href="index.html#contact" class="nav-book">Book a session</a>
-      </div>
+      <a href="index.html#contact" class="nav-book">Book a session</a>
     </div>
   </nav>
 
   <div class="page-hero">
     <div class="page-hero-inner">
-      <p class="eyebrow eyebrow-sage">Our Services</p>
+      <p class="eyebrow">Our Services</p>
       <h1>Elevated care,<br><em>tailored to you.</em></h1>
       <p>Boutique wellness sessions available in-office or at home in Orlando, FL. All appointments by request.</p>
     </div>
   </div>
 
-  <div class="massage-bg" id="massage">
-    <div class="section-wrap">
-      <p class="section-label">Massage &amp; Bodywork</p>
-      <h2 class="section-title">The Reboot</h2>
-      <p class="section-intro">Light-touch bodywork that creates space for deep tissue release — giving your nervous system room to reset, restore, and reconnect.</p>
+  <div class="section section-alt" id="massage">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Massage &amp; Bodywork</p>
+        <h2>Slow, intentional bodywork</h2>
+        <p>Sessions that meet your nervous system where it is — from a focused 30-minute release to a full 2-hour immersion.</p>
+      </div>
       <div class="cards">
+
         <article class="card">
-          <img src="assets/unwind.jpg" alt="The Unwind — head, neck and jaw release" class="card-img">
+          <img src="assets/unwind.jpg" alt="The Unwind session">
           <div class="card-body">
-            <p class="card-duration">30 min · Head, Neck &amp; Jaw Release</p>
+            <p class="card-tag">30 min · Head, Neck &amp; Jaw Release</p>
             <h3 class="card-title">The Unwind</h3>
             <p class="card-desc">A deeply restorative head, neck, and jaw release designed to melt away built-up tension from stress, screen time, and emotional holding patterns.<br><br>This session targets the areas where we subconsciously "hold it all together" — inviting your body to soften, your mind to quiet, and your nervous system to relax.</p>
-            <div class="card-price">$50 <small>30 min &nbsp;·&nbsp; $95 / 60 min</small></div>
+            <div class="card-price">
+              $50
+              <small>30 min &nbsp;·&nbsp; $95 / 60 min</small>
+            </div>
           </div>
         </article>
+
         <article class="card">
-          <img src="assets/reset.jpg" alt="The Reset — full body focused massage" class="card-img">
+          <img src="assets/reset.jpg" alt="The Reset session">
           <div class="card-body">
-            <p class="card-duration">60 min · Full Body, Focused</p>
+            <p class="card-tag">60 min · Full Body, Focused</p>
             <h3 class="card-title">The Reset</h3>
-            <p class="card-desc">A full-body massage and bodywork session designed to release tension, restore balance, and bring you back into your body.<br><br>This focused session works through key areas of tightness and stress, using a blend of intuitive touch and targeted techniques to support both physical relief and nervous system regulation.<br><br>Perfect for when you need to reset, recalibrate, and feel like yourself again — without the overwhelm of a longer session.</p>
+            <p class="card-desc">A full-body massage and bodywork session designed to release tension, restore balance, and bring you back into your body.<br><br>This focused session works through key areas of tightness and stress, using a blend of intuitive touch and targeted techniques to support both physical relief and nervous system regulation.<br><br>Perfect for when you need to reset, recalibrate, and feel like yourself again.</p>
             <div class="card-price">$125</div>
           </div>
         </article>
+
         <article class="card">
-          <img src="assets/immersion.jpg" alt="The Immersion — 2 hour full body experience" class="card-img">
+          <img src="assets/immersion.jpg" alt="The Immersion session">
           <div class="card-body">
-            <p class="card-duration">2 hrs · Full Body Experience</p>
+            <p class="card-tag">2 hrs · Full Body Experience</p>
             <h3 class="card-title">The Immersion</h3>
             <p class="card-desc">A deeply immersive full-body massage and bodywork experience designed for complete release, restoration, and reconnection.<br><br>With extended time, the body is able to unwind layer by layer — allowing for deeper therapeutic work, sustained relaxation, and access to patterns of tension that shorter sessions often can't fully reach.<br><br>Great for body integration after plant medicine!</p>
-            <div class="card-price">$250 <small>Dr. Reyes &amp; Brandon · $300</small></div>
+            <div class="card-price">
+              $250
+              <small>Dr. Reyes &amp; Brandon · $300</small>
+            </div>
           </div>
         </article>
+
       </div>
-      <p class="note">All sessions by appointment. <a href="mailto:hello@thewellnesshousefl.com">Email us</a> or text <a href="tel:4079617616">407·961·7616</a> to book.</p>
     </div>
   </div>
 
-  <div class="rule"></div>
+  <div class="section" id="chiro">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow">Clinical Services</p>
+        <h2>Chiropractic &amp; Consultations</h2>
+        <p>Precision care that goes beyond the adjustment — integrating chiropractic, fascia release, and whole-life wellness strategy.</p>
+      </div>
+      <div class="clinical-grid">
 
-  <div id="chiro">
-    <div class="section-wrap">
-      <p class="section-label">Clinical Services</p>
-      <h2 class="section-title">Chiropractic &amp; Consultations</h2>
-      <p class="section-intro">Precision care that goes beyond the adjustment — integrating chiropractic, fascia release, and whole-life wellness strategy.</p>
-      <div class="chiro-grid">
-        <article class="chiro-card">
-          <div class="chiro-head">
+        <article class="ccard">
+          <div class="ccard-head">
             <div>
-              <h3 class="chiro-title">Chiropractic</h3>
-              <p class="chiro-sub">Initial Exam · Adjustment · Fascia Release</p>
+              <h3 class="ccard-title">Chiropractic</h3>
+              <p class="ccard-sub">Initial Exam · Adjustment · Fascia Release</p>
             </div>
-            <span class="chiro-badge">~75 min</span>
+            <span class="ccard-badge">~75 min</span>
           </div>
-          <p class="chiro-desc">Your initial visit is a profound exploration of your well-being. Through a focused health history and comprehensive assessment, we craft a personalized roadmap for your journey.</p>
-          <p class="chiro-desc">Our 1:1 Elevated-Care experience combines chiropractic care, lifestyle conversations, and specialized 20 min. massage and bodywork.</p>
-          <div class="chiro-therapies">
-            <strong>Available In-Office Therapies</strong>
-            <ul style="list-style:disc;padding-left:1.2em;margin-top:4px">
-              <li>Shockwave therapy</li>
-              <li>Intersegmental traction</li>
-              <li>Cupping therapy</li>
-              <li>Therapeutic Exercises</li>
-            </ul>
+          <div class="ccard-body">
+            <p>Your initial visit is a profound exploration of your well-being. Through a focused health history and comprehensive assessment, we craft a personalized roadmap for your journey.</p>
+            <p>Our 1:1 Elevated-Care experience combines chiropractic care, lifestyle conversations, and specialized 20 min. massage and bodywork.</p>
+            <div class="ccard-list">
+              <strong>Available In-Office Therapies</strong>
+              <ul>
+                <li>Shockwave therapy</li>
+                <li>Intersegmental traction</li>
+                <li>Cupping therapy</li>
+                <li>Therapeutic Exercises</li>
+              </ul>
+            </div>
+            <p class="ccard-alert">We are currently accepting patients who have been involved in a car accident. Remember to get an evaluation within 14 days after the accident.</p>
           </div>
-          <p class="chiro-alert">We are currently accepting patients who have been involved in a car accident. Remember to get an evaluation within 14 days after the accident.</p>
-          <div class="chiro-price">From $175</div>
+          <div class="ccard-price">From $175</div>
         </article>
-        <article class="chiro-card">
-          <div class="chiro-head">
+
+        <article class="ccard">
+          <div class="ccard-head">
             <div>
-              <h3 class="chiro-title">Consultations</h3>
-              <p class="chiro-sub">Virtual Call · Whole-Life Wellness</p>
+              <h3 class="ccard-title">Consultations</h3>
+              <p class="ccard-sub">Virtual Call · Whole-Life Wellness</p>
             </div>
-            <span class="chiro-badge">90 min+</span>
+            <span class="ccard-badge">90 min+</span>
           </div>
-          <p class="chiro-desc">This isn't about handing you a plan and hoping it sticks.</p>
-          <p class="chiro-desc">It's about helping you see your body differently, and finally understand what it's been trying to tell you.</p>
-          <p class="chiro-desc">Inside this consultation, we blend clinical insight with real life. Functional nutrition, metabolic and bloodwork analysis, and honest conversations about your habits, your lifestyle, and what's actually sustainable for you.</p>
-          <p class="chiro-desc">Because real wellness isn't a checklist. It's something you live.</p>
-          <p class="chiro-desc">For many, this becomes the missing piece… where modern medicine meets real, everyday application… and everything starts to click.</p>
-          <div class="chiro-price">$250 <p class="chiro-price-note">Virtual Call</p></div>
+          <div class="ccard-body">
+            <p>This isn't about handing you a plan and hoping it sticks.</p>
+            <p>It's about helping you see your body differently, and finally understand what it's been trying to tell you.</p>
+            <p>Inside this consultation, we blend clinical insight with real life. Functional nutrition, metabolic and bloodwork analysis, and honest conversations about your habits, your lifestyle, and what's actually sustainable for you.</p>
+            <p>Because real wellness isn't a checklist. It's something you live.</p>
+            <p>For many, this becomes the missing piece… where modern medicine meets real, everyday application… and everything starts to click.</p>
+          </div>
+          <div class="ccard-price">
+            $250
+            <p class="ccard-price-note">Virtual Call</p>
+          </div>
         </article>
+
       </div>
     </div>
   </div>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">The Wellness House</span>
-        <span class="footer-tagline">Life feels better when you do.</span>
+      <div>
+        <p class="footer-logo">The Wellness House</p>
+        <p class="footer-tagline">Life feels better when you do.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -237,8 +253,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 The Wellness House</span>
-      <span class="footer-sub">An elevated wellness experience · Orlando</span>
+      <span>&copy; 2026 The Wellness House</span>
+      <span>An elevated wellness experience · Orlando</span>
     </div>
   </footer>
 
