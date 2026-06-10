@@ -1,0 +1,35 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Voice & tone" subtitle="Warm, elevated, second-person. Reassuring, never clinical." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface); }
+  .wrap { padding: 26px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .col h4 { margin: 0 0 12px; font-family: var(--font-body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .do h4 { color: var(--success); }
+  .dont h4 { color: var(--error); }
+  .line { font-size: 14px; line-height: 1.5; color: var(--ink-soft); margin-bottom: 8px; padding-left: 18px; position: relative; }
+  .line::before { position:absolute; left:0; top:0; }
+  .do .line::before { content: '✓'; color: var(--success); }
+  .dont .line::before { content: '✕'; color: var(--error); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="col do">
+      <h4>We say</h4>
+      <div class="line">"We'll meet you there."</div>
+      <div class="line">"Life feels better when you do."</div>
+      <div class="line">"A sanctuary for the shift."</div>
+    </div>
+    <div class="col dont">
+      <h4>We avoid</h4>
+      <div class="line">"Book your appointment today!"</div>
+      <div class="line">Clinical jargon &amp; hard upsells</div>
+      <div class="line">Exclamation-heavy hype</div>
+    </div>
+  </div>
+</body>
+</html>

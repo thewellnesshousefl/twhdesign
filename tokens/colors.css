@@ -1,0 +1,87 @@
+/* ============================================================
+   The Wellness House — Color tokens
+   Aesthetic: Clinical luxe. Warm off-white paper, soft sage,
+   deep evergreen, quiet warm-clay accent.
+   ============================================================ */
+:root {
+  /* ---- Neutrals · warm paper & stone ---- */
+  --mist:       #F9F7F2;  /* lightest wash                */
+  --paper:      #F4F1EA;  /* default page background      */
+  --linen:      #EBE6DB;  /* alternating section ground   */
+  --surface:    #FCFBF7;  /* raised card surface          */
+
+  --stone-50:   #F2EFE8;
+  --stone-100:  #E7E2D7;
+  --stone-200:  #D7D0C2;
+  --stone-300:  #BDB4A2;
+  --stone-400:  #9E9582;
+  --stone-500:  #7C7464;
+  --stone-600:  #5F5849;
+
+  --ink:        #23241E;  /* primary text · warm near-black */
+  --ink-soft:   #4F5046;  /* secondary text                 */
+  --ink-muted:  #857F71;  /* tertiary / captions            */
+
+  /* ---- Sage · primary brand ---- */
+  --sage-50:    #EDF0E9;
+  --sage-100:   #DBE2D1;
+  --sage-200:   #C2CDB4;
+  --sage-300:   #A4B292;
+  --sage-400:   #889877;
+  --sage-500:   #6F8060;  /* brand primary                 */
+  --sage-600:   #59694B;
+  --sage-700:   #45523A;
+  --sage-800:   #343F2C;
+  --sage-900:   #28301F;
+
+  /* ---- Forest · dark brand ground ---- */
+  --forest:      #232C1E;
+  --forest-deep: #1A2116;
+
+  /* ---- Clay · warm accent (used sparingly) ---- */
+  --clay-100:   #F0E2D7;
+  --clay-300:   #D9B79F;
+  --clay-500:   #C08E6F;
+  --clay-700:   #9A6B4F;
+
+  /* ---- Semantic status · all muted/desaturated ---- */
+  --success:    #5C7A52;
+  --success-bg: #E4EADD;
+  --warning:    #B98F3E;
+  --warning-bg: #F1E6CC;
+  --error:      #AE564A;
+  --error-bg:   #F0DAD4;
+  --info:       #6E8499;
+  --info-bg:    #DEE6EC;
+
+  /* ============================================================
+     Semantic aliases — prefer these in components/kits
+     ============================================================ */
+  --bg-page:        var(--paper);
+  --bg-alt:         var(--linen);
+  --bg-wash:        var(--mist);
+  --surface-card:   var(--surface);
+  --surface-sunken: var(--stone-50);
+
+  --text-heading:   var(--ink);
+  --text-body:      var(--ink-soft);
+  --text-muted:     var(--ink-muted);
+  --text-on-brand:  var(--mist);
+  --text-on-dark:   #E9E7DD;
+
+  --brand:          var(--sage-500);
+  --brand-strong:   var(--sage-700);
+  --brand-soft:     var(--sage-100);
+  --brand-wash:     var(--sage-50);
+  --on-brand:       #FCFBF7;
+
+  --accent:         var(--clay-500);
+  --accent-soft:    var(--clay-100);
+
+  --border:         var(--stone-200);
+  --border-soft:    var(--stone-100);
+  --border-strong:  var(--stone-300);
+  --border-brand:   var(--sage-300);
+
+  --ring:           color-mix(in oklab, var(--sage-500) 45%, transparent);
+}

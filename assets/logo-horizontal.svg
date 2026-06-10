@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80" width="600" height="80" role="img" aria-label="The Wellness House">
+  <defs>
+    
+  </defs>
+  <g transform="translate(40 40)">
+    <path class="mono" d="M -20 6 A 20 20 0 0 1 20 6"></path>
+    <line class="mono" x1="-30" y1="11" x2="30" y2="11"></line>
+    <line class="mono" x1="0" y1="-20" x2="0" y2="-14"></line>
+    <line class="mono" x1="15" y1="-14" x2="12" y2="-9"></line>
+    <line class="mono" x1="-15" y1="-14" x2="-12" y2="-9"></line>
+  </g>
+  <text class="tag" x="86" y="30">THE</text>
+  <text class="name" x="86" y="58">WELLNESS HOUSE</text>
+</svg>

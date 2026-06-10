@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Text inks" subtitle="Three warm near-black tiers for headings, body, captions" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--paper); }
+  .wrap { padding: 28px; display: flex; gap: 32px; align-items: flex-start; }
+  .item { display: flex; gap: 12px; align-items: center; }
+  .dot { width: 28px; height: 28px; border-radius: var(--radius-full); border: 1px solid var(--border-soft); }
+  .t { font-size: 13px; }
+  .t b { display:block; font-weight: 500; }
+  .t span { color: var(--text-muted); font-size: 11px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item"><div class="dot" style="background:var(--ink)"></div><div class="t" style="color:var(--ink)"><b>ink</b><span>#23241E · headings</span></div></div>
+    <div class="item"><div class="dot" style="background:var(--ink-soft)"></div><div class="t" style="color:var(--ink-soft)"><b>ink-soft</b><span>#4F5046 · body</span></div></div>
+    <div class="item"><div class="dot" style="background:var(--ink-muted)"></div><div class="t" style="color:var(--ink-muted)"><b>ink-muted</b><span>#857F71 · captions</span></div></div>
+  </div>
+</body>
+</html>

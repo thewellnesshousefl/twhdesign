@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Wordmark & monogram" subtitle="PLACEHOLDER typographic lockups — pending client logo" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--paper); }
+  .wrap { padding: 28px 32px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: stretch; }
+  .panel { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .panel.dark { background: var(--forest); }
+  .panel img { max-width: 100%; height: auto; }
+  .note { grid-column: 1 / -1; font-size: 11px; color: var(--text-muted); letter-spacing: 0.03em; }
+  .mini { display:flex; gap: 20px; }
+  .mini .panel { flex:1; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel"><img src="../../assets/logo-stacked.svg" alt="The Wellness House stacked logo" style="max-height:200px"></div>
+    <div class="mini" style="flex-direction:column">
+      <div class="panel"><img src="../../assets/monogram.svg" alt="monogram" style="max-height:96px"></div>
+      <div class="panel"><img src="../../assets/logo-horizontal.svg" alt="horizontal logo" style="max-width:90%"></div>
+    </div>
+    <div class="note">⚠ Placeholder lockups set in Jost Light. Replace with the client's supplied logo when available.</div>
+  </div>
+</body>
+</html>

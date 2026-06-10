@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Accent — clay & forest" subtitle="Quiet warm clay for highlights; forest for dark grounds" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--surface); }
+  .wrap { padding: 28px; }
+  .row { display: flex; gap: 12px; }
+  .sw { flex: 1; }
+  .chip { height: 78px; border-radius: var(--radius-md); border: 1px solid var(--border-soft); display:flex; align-items:flex-end; padding:8px; box-sizing:border-box; }
+  .chip span { font-size: 11px; font-weight:500; }
+  .lab { margin-top: 8px; font-size: 11px; color: var(--text-body); font-weight: 500; }
+  .hex { font-size: 10px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <div class="sw"><div class="chip" style="background:var(--clay-100)"><span style="color:var(--clay-700)">100</span></div><div class="lab">clay-100</div><div class="hex">#F0E2D7</div></div>
+      <div class="sw"><div class="chip" style="background:var(--clay-300)"><span style="color:var(--clay-700)">300</span></div><div class="lab">clay-300</div><div class="hex">#D9B79F</div></div>
+      <div class="sw"><div class="chip" style="background:var(--clay-500)"><span style="color:#fff">500 · accent</span></div><div class="lab">clay-500</div><div class="hex">#C08E6F</div></div>
+      <div class="sw"><div class="chip" style="background:var(--forest)"><span style="color:#E9E7DD">forest</span></div><div class="lab">forest</div><div class="hex">#232C1E</div></div>
+      <div class="sw"><div class="chip" style="background:var(--forest-deep)"><span style="color:#E9E7DD">deep</span></div><div class="lab">forest-deep</div><div class="hex">#1A2116</div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* ============================================================
+   The Wellness House — Webfonts
+   Loaded from Google Fonts CDN. See README "Visual Foundations".
+   - Jost            → display / headings (geometric, airy, luxe)
+   - Hanken Grotesk  → body / UI (humanist, calm, legible)
+   - Cormorant Garamond (italic) → editorial pull-quote accent
+   NOTE: self-host TTFs later for offline/production use.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
