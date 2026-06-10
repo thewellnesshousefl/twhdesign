@@ -28,6 +28,7 @@
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
 
+    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;background:rgba(244,241,234,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone)}
     .nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s8)}
     .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
@@ -41,14 +42,17 @@
     .nav-book:hover{background:var(--ink);color:var(--surface)}
     @media(max-width:860px){.nav-links{display:none}.nav-cta .phone{display:none}}
 
+    /* BUTTONS */
     .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px var(--s8);border-radius:100px;border:none;cursor:pointer;transition:background 200ms,color 200ms;white-space:nowrap}
     .btn-dark{background:var(--forest);color:var(--surface)}
     .btn-dark:hover{background:#3a4c30}
 
+    /* EYEBROW */
     .eyebrow{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
     .eyebrow::before{content:'—';opacity:.5}
     .eyebrow-sage{color:var(--sage)}
 
+    /* INTRO */
     .intro{padding-top:calc(60px + var(--s16));padding-bottom:var(--s16);background:var(--paper)}
     .intro-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1fr 1fr;gap:var(--s16);align-items:start}
     @media(max-width:860px){.intro-inner{grid-template-columns:1fr}}
@@ -59,6 +63,7 @@
     .intro-photo{width:100%;height:100%;object-fit:cover;object-position:center top}
     .intro-photo-label{position:absolute;bottom:var(--s4);left:var(--s4);font-family:'Jost',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(0,0,0,.3);padding:5px 10px;border-radius:100px;backdrop-filter:blur(4px)}
 
+    /* BODY COPY */
     .story{background:var(--linen);padding:var(--s20) 0}
     .story-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1fr 2fr;gap:var(--s16)}
     @media(max-width:860px){.story-inner{grid-template-columns:1fr}}
@@ -68,6 +73,7 @@
     .story-copy p{font-size:16px;color:var(--ink-soft);line-height:1.8}
     .story-copy .closing{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,1.8vw,20px);color:var(--ink-soft);line-height:1.6;border-top:1px solid var(--stone);padding-top:var(--s6);margin-top:var(--s2)}
 
+    /* PILLARS */
     .pillars{background:var(--paper);padding:var(--s20) 0}
     .pillars-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8)}
     .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s8);margin-top:var(--s10)}
@@ -78,7 +84,8 @@
     .pillar p{font-size:14px;color:var(--ink-muted);line-height:1.7}
     .pillars-cta{margin-top:var(--s12);text-align:center}
 
-    footer{background:var(--forest);border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
+    /* FOOTER */
+    footer{background:#3a4733;border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
     .footer-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--s12)}
     @media(max-width:700px){.footer-inner{grid-template-columns:1fr 1fr}}
     .footer-brand{display:flex;flex-direction:column;gap:var(--s3)}
@@ -113,8 +120,8 @@
         <li><a href="about.html" class="active">About</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="tel:4079617616" class="phone">Text 407·961·7616</a>
-        <a href="index.html#contact" class="nav-book">Book a session</a>
+        <a href="sms:4079617616" class="phone">Text 407·961·7616</a>
+        <a href="sms:4079617616" class="nav-book">Book a session</a>
       </div>
     </div>
   </nav>
@@ -136,7 +143,7 @@
   <section class="story" aria-label="Our story">
     <div class="story-inner">
       <div class="story-aside">
-        <p>Dr. Zoyara Reyes<br>Chiropractor &amp; Entrepreneur<br>Orlando, FL</p>
+        <p>Dr. Zoyara Reyes<br>Chiropractor &amp; Healer<br>Orlando, FL</p>
       </div>
       <div class="story-copy">
         <p>Having supported a global clientele, we've witnessed the immediate power of transformation — the moment the "impossible" becomes the baseline.</p>
@@ -168,7 +175,7 @@
         </div>
       </div>
       <div class="pillars-cta">
-        <a href="index.html#contact" class="btn btn-dark">Begin your experience</a>
+        <a href="sms:4079617616" class="btn btn-dark">Begin your experience</a>
       </div>
     </div>
   </section>
@@ -185,7 +192,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html#contact">Book</a></li>
+          <li><a href="sms:4079617616">Book</a></li>
         </ul>
       </div>
       <div class="footer-col">
