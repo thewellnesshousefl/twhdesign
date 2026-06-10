@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wellness House — Dr. Zoyara Reyes | Orlando, FL</title>
-  <meta name="description" content="An elevated wellness experience in Orlando, FL. Chiropractic, massage & bodywork, and wellness consultations with Dr. Zoyara Reyes.">
+  <title>About — The Wellness House | Dr. Zoyara Reyes</title>
+  <meta name="description" content="Meet Dr. Zoyara Reyes — chiropractor, and founder of The Wellness House in Orlando, FL.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,65 +30,28 @@
     .nav-logo{font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
     .nav-links{display:flex;gap:var(--s8);list-style:none}
     .nav-links a{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-fg);transition:color 150ms}
-    .nav-links a:hover{color:var(--foreground)}
+    .nav-links a:hover,.nav-links a.active{color:var(--foreground)}
     .nav-right{display:flex;align-items:center;gap:var(--s3);font-size:13px;color:var(--muted-fg)}
     .nav-right a{color:var(--primary);font-weight:500}
     @media(max-width:860px){.nav-links{display:none}.nav-right span{display:none}}
     .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:14px var(--s8);border-radius:var(--radius);border:none;cursor:pointer;min-height:44px;transition:background 200ms,border-color 200ms,color 200ms}
     .btn-primary{background:var(--primary);color:var(--primary-fg)}
     .btn-primary:hover{background:#5a6a4d}
-    .btn-outline{background:transparent;color:var(--foreground);border:1px solid var(--border)}
-    .btn-outline:hover{border-color:var(--primary);color:var(--primary)}
-    .btn-white{background:var(--background);color:var(--primary)}
     .label{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:var(--s4)}
-    .label-light{color:rgba(174,183,156,.9)}
+    .page-hero{padding-top:calc(64px + var(--s16));padding-bottom:var(--s12);background:var(--muted)}
+    .page-hero-inner{max-width:720px}
+    .page-hero h1{font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;margin-bottom:var(--s4)}
+    .page-hero h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--primary)}
+    .welcome-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:var(--s16);align-items:start}
+    @media(max-width:860px){.welcome-grid{grid-template-columns:1fr}}
+    .welcome-photo-wrap{position:relative}
+    .welcome-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:calc(var(--radius)*2)}
+    .welcome-photo-caption{position:absolute;bottom:var(--s4);left:var(--s4);background:var(--background);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);padding:var(--s2) var(--s4);border-radius:var(--radius)}
+    .welcome-body{display:flex;flex-direction:column;gap:var(--s6)}
+    blockquote.pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:1.45;border-left:2px solid var(--primary);padding-left:var(--s6)}
     .body-text{font-size:16px;line-height:1.75;color:var(--muted-fg)}
-    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px;overflow:hidden}
-    @media(max-width:860px){.hero{grid-template-columns:1fr}}
-    .hero-left{display:flex;align-items:center;padding:var(--s24) var(--s6) var(--s24) calc((100vw - 1280px)/2 + var(--s6))}
-    @media(max-width:1280px){.hero-left{padding-left:var(--s6)}}
-    @media(max-width:768px){.hero-left{padding:var(--s16) var(--s4)}}
-    .hero-content{max-width:520px}
-    .hero-content h1{font-size:clamp(40px,5vw,66px);font-weight:300;line-height:1.05;margin-bottom:var(--s3)}
-    .hero-content h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--primary)}
-    .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--muted-fg);margin-bottom:var(--s8)}
-    .hero-tags{display:flex;gap:var(--s2);flex-wrap:wrap;margin-bottom:var(--s8)}
-    .tag{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);border:1px solid var(--primary);padding:4px 12px;border-radius:100px}
-    .hero-cta{display:flex;gap:var(--s4);flex-wrap:wrap}
-    .hero-right{position:relative;overflow:hidden}
-    @media(max-width:860px){.hero-right{min-height:60vw}}
-    .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-    .quote-section{text-align:center}
-    .big-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,4vw,48px);line-height:1.3;max-width:720px;margin:0 auto var(--s6)}
-    .quote-attr{font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--primary)}
-    .section-head{text-align:center;margin-bottom:var(--s12)}
-    .section-head .label{text-align:center}
-    .section-title{font-family:'Jost',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;margin-bottom:var(--s4)}
-    .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8)}
-    @media(max-width:800px){.sig-grid{grid-template-columns:1fr}}
-    .sig-card{border:1px solid var(--border);border-radius:calc(var(--radius)*2);padding:var(--s8);background:var(--muted);display:flex;flex-direction:column}
-    .sig-card--dark{background:var(--forest);border-color:transparent}
-    .sig-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--primary);margin-bottom:var(--s3)}
-    .sig-title{font-family:'Jost',sans-serif;font-size:clamp(24px,3vw,32px);font-weight:400;margin-bottom:var(--s2)}
-    .sig-duration{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-fg);margin-bottom:var(--s6)}
-    .sig-desc{font-size:15px;line-height:1.75;color:var(--muted-fg);flex:1;margin-bottom:var(--s6)}
-    .sig-price{font-family:'Jost',sans-serif;font-size:22px;font-weight:500}
-    .sig-price span{font-size:13px;font-weight:400;color:var(--muted-fg)}
-    .corporate{background:var(--primary);color:var(--primary-fg);text-align:center;padding:var(--s16) 0}
-    .corporate .section-title{color:var(--primary-fg);margin-bottom:var(--s4)}
-    .corporate .label{color:rgba(252,251,247,.65);text-align:center}
-    .corporate-desc{font-size:17px;color:rgba(252,251,247,.85);max-width:520px;margin:0 auto var(--s8);line-height:1.7}
-    .contact{background:var(--forest);color:var(--forest-fg)}
-    .contact .section-title{color:var(--forest-fg)}
-    .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s16);align-items:start}
-    @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
-    .contact-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
-    .contact-info{display:flex;flex-direction:column;gap:var(--s8)}
-    .contact-block .label{color:rgba(174,183,156,.85);margin-bottom:var(--s2)}
-    .contact-val{font-size:16px;color:rgba(252,251,247,.88);line-height:1.7}
-    .contact-val a{transition:color 150ms}
-    .contact-val a:hover{color:#fff}
-    .contact-note{font-size:13px;color:rgba(252,251,247,.45);margin-top:4px}
+    .body-text p+p{margin-top:var(--s4)}
+    .signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--primary)}
     footer{background:var(--forest);border-top:1px solid rgba(255,255,255,.07);padding:var(--s8) 0}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s4)}
     .footer-logo{font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(252,251,247,.5)}
@@ -105,8 +68,8 @@
       <a href="index.html" class="nav-logo">The Wellness House</a>
       <ul class="nav-links">
         <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
         <span>Text us</span>
@@ -115,89 +78,33 @@
     </div>
   </nav>
 
-  <section class="hero" aria-label="Welcome">
-    <div class="hero-left">
-      <div class="hero-content">
-        <span class="label">An Elevated Wellness Experience</span>
-        <h1>Life feels better<br><em>when you do.</em></h1>
-        <p class="hero-sub">Chiropractic & fascia release, massage & bodywork, and wellness consultations — a boutique experience, at home or in-office.</p>
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="label">About</span>
+        <h1>Meet <em>Dr. Zoyara Reyes</em></h1>
+      </div>
+    </div>
+  </div>
+
+  <section aria-labelledby="about-heading">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-photo-wrap">
+          <img src="assets/about.jpg" alt="Dr. Zoyara Reyes, founder of The Wellness House" class="welcome-photo">
+          <span class="welcome-photo-caption">Dr. Zoyara Reyes</span>
         </div>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Request a Session</a>
-          <a href="services.html" class="btn btn-outline">Explore Services</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="assets/hero.jpg" alt="Two people standing at the ocean's edge — a moment of stillness and possibility" class="hero-photo">
-    </div>
-  </section>
-
-  <section class="quote-section" aria-label="Brand quote">
-    <div class="container">
-      <blockquote class="big-quote">"Life feels better when you do."</blockquote>
-      <p class="quote-attr">— The Wellness House</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="sig-heading">
-    <div class="container">
-      <div class="section-head">
-        <span class="label">Signature Experiences</span>
-        <h2 class="section-title" id="sig-heading">Where to Begin</h2>
-      </div>
-      <div class="sig-grid">
-        <article class="sig-card">
-          <div class="sig-label">Massage &amp; Bodywork</div>
-          <h3 class="sig-title">The Immersion</h3>
-          <p class="sig-duration">2 hrs · Full Body Experience</p>
-          <p class="sig-desc">Our most transformative bodywork session. Layer by layer, the body unwinds — allowing for deeper therapeutic work, sustained relaxation, and access to tension patterns shorter sessions can't fully reach.</p>
-          <div class="sig-price">$250 <span>· Dr. Reyes &amp; Brandon $300</span></div>
-          <a href="services.html" class="btn btn-outline" style="margin-top:var(--s6);">See All Services</a>
-        </article>
-        <article class="sig-card sig-card--dark">
-          <div class="sig-label" style="color:rgba(174,183,156,.85);">Chiropractic</div>
-          <h3 class="sig-title" style="color:#FCFBF7;">Chiropractic Exam</h3>
-          <p class="sig-duration" style="color:rgba(252,251,247,.55);">~75 min · Initial Exam · Adjustment · Massage</p>
-          <p class="sig-desc" style="color:rgba(252,251,247,.75);">A profound exploration of your well-being. Personalized chiropractic care combined with lifestyle conversations and 20 min. massage and bodywork — all in one elevated visit.</p>
-          <div class="sig-price" style="color:#FCFBF7;">Starts at $175</div>
-          <a href="services.html#chiro" class="btn btn-primary" style="margin-top:var(--s6);">See Chiropractic Services</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="corporate" aria-labelledby="corp-heading">
-    <div class="container">
-      <span class="label">For Teams &amp; Organizations</span>
-      <h2 class="section-title" id="corp-heading">Corporate Wellness Program</h2>
-      <p class="corporate-desc">Bring the transformative care of The Wellness House to your team. Customized wellness programs designed to help your people feel — and perform — at their best.</p>
-      <a href="mailto:hello@thewellnesshousefl.com?subject=Corporate%20Wellness%20Inquiry" class="btn btn-white">Learn More</a>
-    </div>
-  </section>
-
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="container">
-      <div class="contact-grid">
-        <img src="assets/contact.jpg" alt="Booking your session is just a text away" class="contact-photo">
-        <div class="contact-info">
-          <div>
-            <span class="label label-light">Book a Session</span>
-            <h2 class="section-title" id="contact-heading">By Appointment Only</h2>
-            <p class="body-text" style="color:rgba(252,251,247,.7);margin-top:var(--s4);">Our sessions are designed for real transformation — not rushed appointments. Reach out and we'll find a time that works for you.</p>
+        <div class="welcome-body">
+          <span class="label" id="about-heading">Welcome to The Wellness House</span>
+          <blockquote class="pull">"In the journey of life, I'm reaching for the stars, leaning into the radical power of transformation. The moment the 'impossible' becomes the baseline."</blockquote>
+          <div class="body-text">
+            <p>This space is for those who choose the extraordinary. For those who choose a life where health is no longer a quiet distraction, but the foundation for everything you create.</p>
+            <p>I'm talking about a body that feels incredible — one that makes your mind work better, your relationships flourish, and your business grow.</p>
+            <p>Our services are a sanctuary for the whole person. We provide the space to reset, reclaim, and reconnect with your inner vitality. Unlike traditional clinics, we don't just address symptoms — we create the conditions for your body to truly thrive.</p>
+            <p>This is more than a treatment. It's an experience where something shifts deep within you — even if you don't yet have the words for it.</p>
           </div>
-          <div class="contact-block"><span class="label">Text or Call</span><p class="contact-val"><a href="tel:4079617616">407·961·7616</a></p></div>
-          <div class="contact-block"><span class="label">Email</span><p class="contact-val"><a href="mailto:hello@thewellnesshousefl.com">hello@thewellnesshousefl.com</a></p></div>
-          <div class="contact-block">
-            <span class="label">Location</span>
-            <p class="contact-val">401 N. Mills Ave, STE A<br>Orlando, FL 32803</p>
-            <p class="contact-note">In-office sessions · Home visits available</p>
-          </div>
-          <div class="contact-block">
-            <span class="label">Hours</span>
-            <p class="contact-val">Monday – Friday: 9AM – 5PM<br>Saturday: Available by request</p>
-          </div>
-          <a href="tel:4079617616" class="btn btn-primary" style="align-self:flex-start;margin-top:var(--s4);">Text to Book &rarr;</a>
+          <p class="signature">— Dr. Zoyara Reyes</p>
+          <div><a href="index.html#contact" class="btn btn-primary">Request a Session</a></div>
         </div>
       </div>
     </div>
