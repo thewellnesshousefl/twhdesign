@@ -1,58 +1,60 @@
 /* ============================================================
    The Wellness House — Color tokens
-   Aesthetic: Clinical luxe. Warm off-white paper, soft sage,
-   deep evergreen, quiet warm-clay accent.
+   Aesthetic: Coastal luxe. Warm sand grounds, surf-aqua primary,
+   deep ocean ground, warm sand accent. Palette sampled from the
+   hero photograph. Token names kept (sage/forest/clay) for
+   stability — only the values changed.
    ============================================================ */
 :root {
-  /* ---- Neutrals · warm paper & stone ---- */
-  --mist:       #F9F7F2;  /* lightest wash                */
-  --paper:      #F4F1EA;  /* default page background      */
-  --linen:      #EBE6DB;  /* alternating section ground   */
-  --surface:    #FCFBF7;  /* raised card surface          */
+  /* ---- Neutrals · sand & driftwood ---- */
+  --mist:       #FAF6EF;  /* lightest wash                */
+  --paper:      #F4EFE6;  /* default page background      */
+  --linen:      #EBE3D4;  /* alternating section ground   */
+  --surface:    #FDFBF6;  /* raised card surface          */
 
-  --stone-50:   #F2EFE8;
-  --stone-100:  #E7E2D7;
-  --stone-200:  #D7D0C2;
-  --stone-300:  #BDB4A2;
-  --stone-400:  #9E9582;
-  --stone-500:  #7C7464;
-  --stone-600:  #5F5849;
+  --stone-50:   #EFEAE0;
+  --stone-100:  #E4DDD0;
+  --stone-200:  #D2C9B9;
+  --stone-300:  #B6AB97;
+  --stone-400:  #948A78;
+  --stone-500:  #6F6757;
+  --stone-600:  #524C3F;
 
-  --ink:        #23241E;  /* primary text · warm near-black */
-  --ink-soft:   #4F5046;  /* secondary text                 */
-  --ink-muted:  #857F71;  /* tertiary / captions            */
+  --ink:        #1F2422;  /* primary text · warm near-black */
+  --ink-soft:   #4A4F49;  /* secondary text                 */
+  --ink-muted:  #847C6E;  /* tertiary / captions            */
 
-  /* ---- Sage · primary brand ---- */
-  --sage-50:    #EDF0E9;
-  --sage-100:   #DBE2D1;
-  --sage-200:   #C2CDB4;
-  --sage-300:   #A4B292;
-  --sage-400:   #889877;
-  --sage-500:   #6F8060;  /* brand primary                 */
-  --sage-600:   #59694B;
-  --sage-700:   #45523A;
-  --sage-800:   #343F2C;
-  --sage-900:   #28301F;
+  /* ---- Sea (token: sage) · primary brand · surf aqua ---- */
+  --sage-50:    #E9F5F7;
+  --sage-100:   #CCEAEE;
+  --sage-200:   #A3D9DF;
+  --sage-300:   #71C2CE;
+  --sage-400:   #3C9FAC;
+  --sage-500:   #0F7C88;  /* brand primary · surf teal     */
+  --sage-600:   #0C6975;
+  --sage-700:   #0A5560;
+  --sage-800:   #084651;
+  --sage-900:   #06333B;
 
-  /* ---- Forest · dark brand ground ---- */
-  --forest:      #232C1E;
-  --forest-deep: #1A2116;
+  /* ---- Deep ocean (token: forest) · dark brand ground ---- */
+  --forest:      #0E3A44;
+  --forest-deep: #07262E;
 
-  /* ---- Clay · warm accent (used sparingly) ---- */
-  --clay-100:   #F0E2D7;
-  --clay-300:   #D9B79F;
-  --clay-500:   #C08E6F;
-  --clay-700:   #9A6B4F;
+  /* ---- Warm sand (token: clay) · accent (used sparingly) ---- */
+  --clay-100:   #F2E7D2;
+  --clay-300:   #E3C896;
+  --clay-500:   #CCA45E;
+  --clay-700:   #A07B3F;
 
-  /* ---- Semantic status · all muted/desaturated ---- */
-  --success:    #5C7A52;
-  --success-bg: #E4EADD;
-  --warning:    #B98F3E;
+  /* ---- Semantic status · muted / coastal ---- */
+  --success:    #3F8478;
+  --success-bg: #DCEBE7;
+  --warning:    #B58A3C;
   --warning-bg: #F1E6CC;
-  --error:      #AE564A;
-  --error-bg:   #F0DAD4;
-  --info:       #6E8499;
-  --info-bg:    #DEE6EC;
+  --error:      #B05B4E;
+  --error-bg:   #F1DAD4;
+  --info:       #4C7C99;
+  --info-bg:    #DBE7EE;
 
   /* ============================================================
      Semantic aliases — prefer these in components/kits
@@ -67,13 +69,13 @@
   --text-body:      var(--ink-soft);
   --text-muted:     var(--ink-muted);
   --text-on-brand:  var(--mist);
-  --text-on-dark:   #E9E7DD;
+  --text-on-dark:   #E6F1F1;
 
   --brand:          var(--sage-500);
   --brand-strong:   var(--sage-700);
   --brand-soft:     var(--sage-100);
   --brand-wash:     var(--sage-50);
-  --on-brand:       #FCFBF7;
+  --on-brand:       #FDFBF6;
 
   --accent:         var(--clay-500);
   --accent-soft:    var(--clay-100);
