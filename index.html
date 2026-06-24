@@ -10,15 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper:   #F4F1EA;
-      --linen:   #EBE6DB;
-      --surface: #FCFBF7;
-      --stone:   #D7D0C2;
-      --ink:     #23241E;
-      --ink-soft:#4F5046;
-      --ink-muted:#857F71;
-      --sage:    #6F8060;
-      --forest:  #8C8778;
+      --paper:   #F4EFE6;
+      --linen:   #EBE3D4;
+      --surface: #FDFBF6;
+      --stone:   #D2C9B9;
+      --ink:     #1F2422;
+      --ink-soft:#4A4F49;
+      --ink-muted:#847C6E;
+      --sage:    #0F7C88;
+      --forest:  #0E3A44;
       --radius:  14px;
       --s1:4px;--s2:8px;--s3:13px;--s4:18px;--s6:24px;--s8:32px;--s10:40px;--s12:48px;--s16:64px;--s20:80px;--s24:96px;
     }
@@ -30,7 +30,7 @@
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;transition:background 300ms,border-color 300ms}
-    nav.scrolled{background:rgba(244,241,234,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone)}
+    nav.scrolled{background:rgba(244,239,230,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone)}
     nav.scrolled .nav-links a{color:var(--ink-muted)}
     nav.scrolled .nav-links a:hover{color:var(--ink)}
     nav.scrolled .nav-logo{color:var(--ink)}
@@ -53,7 +53,7 @@
     /* BUTTONS */
     .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px var(--s8);border-radius:100px;border:none;cursor:pointer;transition:background 200ms,color 200ms,border-color 200ms;white-space:nowrap}
     .btn-dark{background:var(--forest);color:var(--surface)}
-    .btn-dark:hover{background:#3a4c30}
+    .btn-dark:hover{background:#0A5560}
     .btn-outline-light{background:transparent;color:var(--surface);border:1px solid rgba(255,255,255,.4)}
     .btn-outline-light:hover{background:rgba(255,255,255,.1)}
     .btn-outline-dark{background:transparent;color:var(--ink);border:1px solid var(--stone)}
@@ -67,7 +67,7 @@
     .eyebrow-sage{color:var(--sage)}
 
     /* HERO */
-    .hero{background:linear-gradient(160deg,#3a4733 0%,#232c1e 55%,#1a2116 100%);color:var(--surface);min-height:80vh;display:flex;align-items:center;padding-top:60px;overflow:hidden;position:relative}
+    .hero{background:linear-gradient(160deg,#0E3A44 0%,#0B3039 55%,#07262E 100%);color:var(--surface);min-height:80vh;display:flex;align-items:center;padding-top:60px;overflow:hidden;position:relative}
     .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
     .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,35,50,.28) 0%,rgba(10,20,35,.18) 100%);z-index:1}
     .hero-left,.hero-right{position:relative;z-index:2}
@@ -136,7 +136,7 @@
     .bigquote cite{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.35);font-style:normal}
 
     /* FOOTER */
-    footer{background:#2e4a5a;border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
+    footer{background:#0E3A44;border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
     .footer-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--s12)}
     @media(max-width:700px){.footer-inner{grid-template-columns:1fr 1fr}}
     .footer-brand{display:flex;flex-direction:column;gap:var(--s3)}

@@ -10,15 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Hanken+Grotesk:wght@300;400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #F4F1EA;
-      --linen: #EBE6DB;
-      --surface: #FCFBF7;
-      --stone: #D7D0C2;
-      --ink: #23241E;
-      --ink-soft: #4F5046;
-      --ink-muted: #857F71;
-      --sage: #6F8060;
-      --forest: #8C8778‎;
+      --paper: #F4EFE6;
+      --linen: #EBE3D4;
+      --surface: #FDFBF6;
+      --stone: #D2C9B9;
+      --ink: #1F2422;
+      --ink-soft: #4A4F49;
+      --ink-muted: #847C6E;
+      --sage: #0F7C88;
+      --forest: #0E3A44‎;
       --r: 14px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,7 @@
     a { color: inherit; text-decoration: none; }
 
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px; background: rgba(244,241,234,.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--stone); display: flex; align-items: center; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px; background: rgba(244,239,230,.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--stone); display: flex; align-items: center; }
     .nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); display: flex; align-items: center; gap: 10px; }
     .nav-logo svg { width: 28px; height: 28px; }
@@ -68,7 +68,7 @@
     .card-price { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 500; color: var(--ink); border-top: 1px solid var(--linen); padding-top: 16px; margin-top: auto; }
     .card-price small { display: block; font-size: 12px; font-weight: 400; color: var(--ink-muted); margin-top: 3px; }
     .card-btn { display: inline-flex; align-items: center; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 11px 22px; border-radius: 100px; background: var(--forest); color: #fff; margin-top: 16px; transition: background 200ms; }
-    .card-btn:hover { background: #3a4c30; }
+    .card-btn:hover { background: #0A5560; }
 
     /* CLINICAL CARDS */
     .clinical-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -87,7 +87,7 @@
     .ccard-price { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 400; color: var(--ink); border-top: 1px solid var(--linen); padding-top: 16px; margin-top: auto; }
     .ccard-price-note { font-size: 13px; color: var(--sage); margin-top: 4px; }
     .ccard-book-btn { display: inline-flex; align-items: center; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 11px 22px; border-radius: 100px; background: var(--forest); color: #fff; margin-top: 20px; transition: background 200ms; }
-    .ccard-book-btn:hover { background: #3a4c30; }
+    .ccard-book-btn:hover { background: #0A5560; }
     .book-options { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
     .book-opt { display: inline-flex; align-items: center; gap: 5px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 9px 16px; border-radius: 100px; border: 1px solid var(--stone); color: var(--ink-soft); background: transparent; transition: border-color 150ms, color 150ms, background 150ms; }
     .book-opt:hover { border-color: var(--ink); color: var(--ink); background: var(--linen); }
