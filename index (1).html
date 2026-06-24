@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wellness House — Dr. Zoyara Reyes | Orlando, FL</title>
+  <meta name="description" content="An elevated wellness experience in Orlando, FL. Chiropractic & fascia release, massage & bodywork, and wellness consultations with Dr. Zoyara Reyes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:   #FAF8F3;
+      --linen:   #F1EEE8;
+      --surface: #FFFFFF;
+      --stone:   #D9D1C3;
+      --ink:     #1F2422;
+      --ink-soft:#4A4F49;
+      --ink-muted:#847C6E;
+      --sage:    #0F7C88;
+      --forest:  #0E3A44;
+      --radius:  14px;
+      --s1:4px;--s2:8px;--s3:13px;--s4:18px;--s6:24px;--s8:32px;--s10:40px;--s12:48px;--s16:64px;--s20:80px;--s24:96px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Hanken Grotesk',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;transition:background 300ms,border-color 300ms}
+    nav.scrolled{background:rgba(250,248,243,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone)}
+    nav.scrolled .nav-links a{color:var(--ink-muted)}
+    nav.scrolled .nav-links a:hover{color:var(--ink)}
+    nav.scrolled .nav-logo{color:var(--ink)}
+    nav.scrolled .nav-book{border-color:var(--ink);color:var(--ink)}
+    nav.scrolled .nav-book:hover{background:var(--ink);color:var(--surface)}
+    nav.scrolled .nav-cta{color:var(--ink-muted)}
+    .nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s8)}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+    .nav-logo svg{width:28px;height:28px;flex-shrink:0}
+    .nav-links{display:flex;gap:var(--s8);list-style:none}
+    .nav-links a{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);transition:color 150ms}
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-cta{display:flex;align-items:center;gap:var(--s4);font-size:13px;color:var(--ink-muted)}
+    .nav-cta a.phone{font-size:12px}
+    .nav-book{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border:1px solid var(--ink);border-radius:100px;color:var(--ink);transition:background 200ms,color 200ms}
+    .nav-book:hover{background:var(--ink);color:var(--surface)}
+    .hero-nav nav{color:var(--surface)}
+    @media(max-width:860px){.nav-links{display:none}.nav-cta .phone{display:none}}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:var(--s2);font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px var(--s8);border-radius:100px;border:none;cursor:pointer;transition:background 200ms,color 200ms,border-color 200ms;white-space:nowrap}
+    .btn-dark{background:var(--forest);color:var(--surface)}
+    .btn-dark:hover{background:#0A5560}
+    .btn-outline-light{background:transparent;color:var(--surface);border:1px solid rgba(255,255,255,.4)}
+    .btn-outline-light:hover{background:rgba(255,255,255,.1)}
+    .btn-outline-dark{background:transparent;color:var(--ink);border:1px solid var(--stone)}
+    .btn-outline-dark:hover{border-color:var(--ink)}
+
+    /* LABELS */
+    .eyebrow{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
+    .eyebrow::before{content:'—';opacity:.5}
+    .eyebrow-light{color:rgba(255,255,255,.55)}
+    .eyebrow-light::before{color:rgba(255,255,255,.3)}
+    .eyebrow-sage{color:var(--sage)}
+
+    /* HERO */
+    .hero{background:linear-gradient(160deg,#0E3A44 0%,#0B3039 55%,#07262E 100%);color:var(--surface);min-height:80vh;display:flex;align-items:center;padding-top:60px;overflow:hidden;position:relative}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+    .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,35,50,.28) 0%,rgba(10,20,35,.18) 100%);z-index:1}
+    .hero-left,.hero-right{position:relative;z-index:2}
+    @media(max-width:860px){.hero{grid-template-columns:1fr}}
+    .hero-left{width:100%;max-width:1200px;margin:0 auto;padding:var(--s16) var(--s8)}
+    @media(max-width:1200px){.hero-left{padding-left:var(--s8)}}
+    @media(max-width:768px){.hero-left{padding:var(--s16) var(--s6)}}
+    .hero-content{max-width:560px}
+    .hero-content h1{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(42px,5.5vw,72px);font-weight:300;line-height:1.0;letter-spacing:-.02em;margin-bottom:var(--s6)}
+    .hero-desc{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:400px;margin-bottom:var(--s10)}
+    .hero-actions{display:flex;gap:var(--s3);flex-wrap:wrap}
+    .hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:var(--s12) var(--s8)}
+    @media(max-width:860px){.hero-right{min-height:55vw;padding:var(--s8)}}
+    .hero-photo-wrap{position:relative;width:100%;max-width:380px;border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+    .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .hero-photo-label{position:absolute;bottom:var(--s4);left:var(--s4);font-family:'Jost',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);background:rgba(35,44,30,.6);padding:5px 10px;border-radius:100px;backdrop-filter:blur(4px)}
+
+    /* MEET YOU THERE */
+    .meet{background:var(--paper);text-align:center;padding:var(--s20) var(--s8)}
+    .meet-quote{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;line-height:1.5;max-width:560px;margin:0 auto;color:var(--ink-soft)}
+
+    /* SERVICES */
+    .services{background:var(--linen);padding:var(--s20) 0}
+    .services-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8)}
+    .services-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:var(--s10);gap:var(--s4)}
+    .services-head h2{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+    .view-all{font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--ink-muted);white-space:nowrap;display:flex;align-items:center;gap:var(--s2);padding-bottom:6px;border-bottom:1px solid var(--stone);transition:color 150ms,border-color 150ms}
+    .view-all:hover{color:var(--ink);border-color:var(--ink)}
+    .service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+    @media(max-width:860px){.service-cards{grid-template-columns:1fr}}
+    .scard{background:var(--surface);border:1px solid rgba(0,0,0,.07);border-radius:var(--radius);padding:var(--s6);display:flex;flex-direction:column;gap:var(--s4)}
+    .scard-icon{width:36px;height:36px;border-radius:50%;border:1px solid var(--stone);display:flex;align-items:center;justify-content:center;color:var(--sage);font-size:16px}
+    .scard-tags{display:flex;gap:var(--s2);flex-wrap:wrap}
+    .scard-tag{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--linen);color:var(--ink-muted)}
+    .scard-title{font-family:'Hanken Grotesk',sans-serif;font-size:20px;font-weight:400;line-height:1.2;color:var(--ink)}
+    .scard-desc{font-size:14px;color:var(--ink-muted);line-height:1.65;flex:1}
+    .scard-foot{display:flex;align-items:center;justify-content:space-between;padding-top:var(--s4);border-top:1px solid var(--linen);margin-top:auto}
+    .scard-price{font-family:'Jost',sans-serif;font-size:13px;font-weight:500;color:var(--ink-soft)}
+    .scard-link{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:4px;transition:gap 150ms}
+    .scard-link:hover{gap:8px}
+    .book-options{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+    .book-opt{display:inline-flex;align-items:center;gap:4px;font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:8px 14px;border-radius:100px;border:1px solid var(--stone);color:var(--ink-soft);transition:border-color 150ms,color 150ms,background 150ms}
+    .book-opt:hover{border-color:var(--ink);color:var(--ink);background:var(--linen)}
+
+    /* FOUNDER / ABOUT */
+    .founder{background:var(--paper);padding:var(--s10) 0 var(--s20)}
+    .founder-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:.85fr 1fr;gap:var(--s16);align-items:center}
+    @media(max-width:860px){.founder-inner{grid-template-columns:1fr;gap:var(--s10)}}
+    .founder-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4}
+    .founder-photo{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .founder-photo-label{position:absolute;bottom:var(--s4);left:var(--s4);font-family:'Jost',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75);background:rgba(14,58,68,.45);padding:5px 10px;border-radius:100px;backdrop-filter:blur(4px)}
+    .founder-body{display:flex;flex-direction:column;gap:var(--s6)}
+    .founder-body h2{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+    .founder-lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,1.9vw,21px);line-height:1.6;color:var(--ink-soft);max-width:460px}
+    .founder-copy{display:flex;flex-direction:column;gap:var(--s4)}
+    .founder-copy p{font-size:15px;color:var(--ink-soft);line-height:1.8;max-width:480px}
+    .founder-attr{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)}
+
+    /* SANCTUARY */
+    .sanctuary{background:var(--paper);padding:var(--s20) 0}
+    .sanctuary-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1fr 1fr;gap:var(--s16);align-items:center}
+    @media(max-width:860px){.sanctuary-inner{grid-template-columns:1fr}}
+    .sanctuary-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+    .sanctuary-photo{width:100%;height:100%;object-fit:cover}
+    .sanctuary-photo-label{position:absolute;bottom:var(--s4);left:var(--s4);font-family:'Jost',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(0,0,0,.3);padding:5px 10px;border-radius:100px;backdrop-filter:blur(4px)}
+    .sanctuary-body{display:flex;flex-direction:column;gap:var(--s6)}
+    .sanctuary-body h2{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+    .sanctuary-body p{font-size:16px;color:var(--ink-soft);line-height:1.7;max-width:420px}
+    .immersion-feature{background:var(--surface);border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);padding:var(--s6);display:flex;flex-direction:column;gap:var(--s2)}
+    .immersion-tag{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sage)}
+    .immersion-title{font-family:'Hanken Grotesk',sans-serif;font-size:22px;font-weight:400;color:var(--ink);line-height:1.2}
+    .immersion-detail{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+    .immersion-desc{font-size:14px;color:var(--ink-muted);line-height:1.65;margin-top:var(--s2)}
+    .immersion-price{font-family:'Jost',sans-serif;font-size:18px;font-weight:500;color:var(--ink);margin-top:var(--s2)}
+    .immersion-price span{font-size:13px;font-weight:400;color:var(--ink-muted)}
+
+    /* BIG QUOTE */
+    .bigquote{background:var(--forest);color:var(--surface);text-align:center;padding:var(--s24) var(--s8)}
+    .bigquote blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(28px,4.5vw,52px);font-weight:300;line-height:1.3;max-width:700px;margin:0 auto var(--s6)}
+    .bigquote cite{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.35);font-style:normal}
+
+    /* FOOTER */
+    footer{background:#0E3A44;border-top:1px solid rgba(255,255,255,.07);padding:var(--s16) 0 var(--s8)}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:0 var(--s8);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--s12)}
+    @media(max-width:700px){.footer-inner{grid-template-columns:1fr 1fr}}
+    .footer-brand{display:flex;flex-direction:column;gap:var(--s3)}
+    .footer-logo{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+    .footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(255,255,255,.35)}
+    .footer-col h4{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:var(--s4)}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:var(--s2)}
+    .footer-col ul a{font-size:14px;color:rgba(255,255,255,.55);transition:color 150ms}
+    .footer-col ul a:hover{color:rgba(255,255,255,.9)}
+    .footer-col p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.7}
+    .footer-bottom{max-width:1200px;margin:var(--s12) auto 0;padding:var(--s6) var(--s8) 0;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s4)}
+    .footer-copy{font-size:12px;color:rgba(255,255,255,.25)}
+    .footer-sub{font-size:12px;color:rgba(255,255,255,.25)}
+
+    /* NAV default state (over dark hero) */
+    .nav-links a{color:rgba(255,255,255,.6)}
+    .nav-links a:hover,.nav-links a.active{color:#fff}
+    .nav-logo{color:#fff}
+    .nav-book{border-color:rgba(255,255,255,.4);color:#fff}
+    .nav-book:hover{background:rgba(255,255,255,.15);color:#fff}
+    .nav-cta{color:rgba(255,255,255,.6)}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important}}
+  </style>
+</head>
+<body>
+
+  <div class="hero-section-wrap">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo-horizontal.svg" alt="TWH" style="height:28px;width:auto;object-fit:contain;flex-shrink:0;max-width:120px;">
+          The Wellness House
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="sms:4079617616" class="phone">Text 407·961·7616</a>
+          <a href="sms:4079617616" class="nav-book">Book a session</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" aria-label="Welcome">
+      <img src="assets/hero.jpg" alt="" class="hero-bg" aria-hidden="true">
+      <div class="hero-left">
+        <div class="hero-content">
+          <p class="eyebrow eyebrow-light">An Elevated Wellness Experience</p>
+          <h1>Life feels better<br>when you do.</h1>
+          <p class="hero-desc">Chiropractic, Massage &amp; Bodywork, and Wellness Consultations — a boutique experience, at home or in-office.</p>
+          <div class="hero-actions">
+            <a href="sms:4079617616" class="btn btn-dark">Book a session</a>
+            <a href="services.html" class="btn btn-outline-light">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="founder" aria-label="Meet the founder">
+    <div class="founder-inner">
+      <div class="founder-photo-wrap">
+        <img src="assets/about.jpg" alt="Dr. Zoyara Reyes, founder of The Wellness House" class="founder-photo">
+        <span class="founder-photo-label">— Dr. Zoyara Reyes</span>
+      </div>
+      <div class="founder-body">
+        <div>
+          <p class="eyebrow eyebrow-sage">Welcome to The Wellness House</p>
+          <h2>We choose the extraordinary</h2>
+        </div>
+        <p class="founder-lead">In the journey of life, I'm reaching for the stars, bypassing perceived limits and leaning into the radical power we hold over our own bodies.</p>
+        <div class="founder-copy">
+          <p>Having supported a global clientele, we've witnessed the immediate power of transformation — the moment the “impossible” becomes the baseline.</p>
+          <p>This space is for those who desire a life where health is no longer a quiet distraction, but the foundation for everything you create — a body that feels incredible, that makes your food taste better, your relationships flourish, and your business grow.</p>
+          <p>Our sessions are a sanctuary for the shift. The body already knows how to heal; we simply create the conditions for it to do so.</p>
+        </div>
+        <p class="founder-attr">Dr. Zoyara Reyes · Chiropractor &amp; Entrepreneur · Orlando, FL</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="services-inner">
+      <div class="services-head">
+        <div>
+          <p class="eyebrow eyebrow-sage">Our Services</p>
+          <h2 id="services-heading">Keep doing what you Love...</h2>
+        </div>
+        <a href="services.html" class="view-all">View all services &rarr;</a>
+      </div>
+      <div class="service-cards">
+        <article class="scard">
+          <div class="scard-icon">⚡</div>
+          <div class="scard-tags">
+            <span class="scard-tag">In-office &amp; in-home</span>
+            <span class="scard-tag">~75 min</span>
+          </div>
+          <h3 class="scard-title">Chiropractic &amp; Fascia Release</h3>
+          <p class="scard-desc">Restore alignment, release tension, and move through life with greater ease.</p>
+          <div class="scard-foot">
+            <a href="services.html#chiro" class="scard-link">View service &rarr;</a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-icon">✋</div>
+          <div class="scard-tags">
+            <span class="scard-tag">In-home &amp; in-office</span>
+            <span class="scard-tag">30–120 min</span>
+          </div>
+          <h3 class="scard-title">Massage &amp; Bodywork</h3>
+          <p class="scard-desc">Bodywork tailored to what your body needs today. Whether you're looking for targeted relief or a deeper restorative experience, each session is designed to help you feel more at ease in your body.</p>
+          <div class="scard-foot">
+            <a href="services.html#massage" class="scard-link">View service &rarr;</a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-icon">✦</div>
+          <div class="scard-tags">
+            <span class="scard-tag">Virtual</span>
+            <span class="scard-tag">90 min+</span>
+          </div>
+          <h3 class="scard-title">Wellness Consultations</h3>
+          <p class="scard-desc">A grounded conversation about how you want to feel, and the path there. Functional nutrition, bloodwork analysis, and a real plan built around your life.</p>
+          <div class="scard-foot">
+            <a href="https://calendar.app.google/XvhnTawmkfBcHMtT7" target="_blank" rel="noopener" class="scard-link">Book &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sanctuary" id="contact" aria-labelledby="sanctuary-heading">
+    <div class="sanctuary-inner">
+      <div class="sanctuary-photo-wrap">
+        <img src="assets/contact.jpg" alt="A calm, intentional session space" class="sanctuary-photo">
+        <span class="sanctuary-photo-label">In-home session</span>
+      </div>
+      <div class="sanctuary-body">
+        <p class="eyebrow eyebrow-sage">At Home or In-Office</p>
+        <h2 id="sanctuary-heading">A sanctuary, wherever you are</h2>
+        <p>See you soon!.</p>
+        <div class="immersion-feature">
+          <div class="immersion-tag">Signature Session · Massage &amp; Bodywork</div>
+          <p class="immersion-title">The Immersion</p>
+          <p class="immersion-detail">2 hrs · Full Body Experience</p>
+          <p class="immersion-desc">A deeply immersive full-body experience designed for release, restoration, and reconnection. Layer by layer, the body unwinds, allowing for deeper therapeutic work and access to patterns of tension shorter sessions can't fully reach. Great for body integration after plant medicine.</p>
+        </div>
+        <div><a href="https://calendly.com/bodyworkspecialist/totalbodyreset" target="_blank" rel="noopener" class="btn btn-dark">Request an Appointment</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bigquote" aria-label="Brand philosophy">
+    <blockquote>"This space is for those who choose the extraordinary."</blockquote>
+    <cite>The Wellness House</cite>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">The Wellness House</span>
+        <span class="footer-tagline">Life feels better when you do.</span>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sms:4079617616">Book</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Text 407·961·7616<br>401 N. Mills Ave, STE A<br>Orlando, FL 32803<br>Appointments available Tue–Sat</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 The Wellness House</span>
+      <span class="footer-sub">An elevated wellness experience · Orlando</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    function updateNav() { nav.classList.toggle('scrolled', window.scrollY > 10); }
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  </script>
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <rect width="100" height="100" fill="#0E3A44"/>
+      <rect x="0" y="66" width="100" height="34" fill="#FAF8F3"/>
+      <circle cx="72" cy="32" r="11" fill="#0F7C88"/>
+      <path d="M0 62 Q25 56 50 62 T100 62" stroke="#0F7C88" stroke-width="3" fill="none" opacity="0.5"/>
+    </svg>
+  </template>
+</body>
+</html>
